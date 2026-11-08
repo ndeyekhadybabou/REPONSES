@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XXXX - BABOU Ndeye Khady -->
+<livre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="r8.xsd"
+       isbn="978207036822">
+  <titre>Le Mandat</titre>
+  <auteur>Sembène Ousmane</auteur>
+  <annee>1966</annee>
+</livre>

@@ -1,0 +1,21 @@
+<!-- XXXX - Ndeye khady babou -->
+
+R1
+- isbn : simple
+- livre contenant titre : complexe
+- prix devise="EUR" : complexe
+- annee : simple
+
+R4
+1. Valide
+2. Valide
+3. Invalide (ordre non respecte)
+4. Invalide (auteur manquant)
+
+R5
+- <doc/> : valide
+- <doc langue="en" version="1.0"/> : valide
+- <doc version="2.0"/> : invalide (version fixee a 1.0)
+- La valeur fr n'est pas ecrite dans le fichier : le validateur l'ajoute apres validation.
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XXXX - BABOU Ndeye Khady -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="CodePostal">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Note">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Statut">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="brouillon"/>
+      <xs:enumeration value="publie"/>
+      <xs:enumeration value="archive"/>
+    </xs:restriction>
+  </xs:simpleType>
+<xs:simpleType name="Montant">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DeviseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XOF"/>
+      <xs:enumeration value="EUR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PrixValeur">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="PrixType">
+    <xs:simpleContent>
+      <xs:extension base="PrixValeur">
+        <xs:attribute name="devise" type="DeviseType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  </xs:schema>

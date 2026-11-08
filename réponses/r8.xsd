@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XXXX - BABOU Ndeye Khady -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="IsbnType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{13}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AnneeType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1450"/>
+      <xs:maxInclusive value="2100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="livre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titre" type="xs:string"/>
+        <xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+        <xs:element name="annee" type="AnneeType" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="isbn" type="IsbnType" use="required"/>
+      <xs:attribute name="genre" type="xs:string" default="roman"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

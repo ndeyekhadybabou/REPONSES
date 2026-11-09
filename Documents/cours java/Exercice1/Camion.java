@@ -1,0 +1,4 @@
+class Camion extends Vehicule {
+}
+    
+
